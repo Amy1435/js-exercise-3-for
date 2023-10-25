@@ -17,13 +17,6 @@
 
 // console.log(array);
 
-//2. Fai inserire un numero, che chiameremo N, all’utente.
-//Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
-//Ogni volta che ne crei uno, stampalo a schermo.
-
-// let numero = prompt("inserisci un numero");
-// let n = parseInt(numero);
-
 //3. In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby, chiedi all’utente il suo nome e comunicagli se può partecipare o no alla festa.
 
 // let invitati = ["Giuseppe", "Paolo", "Vanessa", "Stefano", "Clara", "Alice"];
@@ -34,3 +27,23 @@
 // } else {
 //     alert("non sei sulla lista " + nomeUtente + ", pultroppo non puoi entrare");
 // }
+
+//2. Fai inserire un numero, che chiameremo N, all’utente.
+//Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
+//Ogni volta che ne crei uno, stampalo a schermo.
+
+let numero = parseInt(prompt("inserisci un numero"));
+
+if (!isNaN(numero)) {
+    let nArrayContenuti = [];
+    for (let i = 0; i < numero; i++) {
+        let numeroArray = [];
+
+        for (let j = 0; j < 10; j++) {
+            let nArray = Math.floor(Math.random() * 10) + 1;
+            numeroArray.push(nArray);
+        }
+        nArrayContenuti.push(numeroArray);
+    }
+    console.log(nArrayContenuti);
+}
